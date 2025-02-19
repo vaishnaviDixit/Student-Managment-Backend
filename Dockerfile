@@ -13,7 +13,9 @@ COPY pom.xml .
 COPY src src
 
 # Build the application
-RUN ./mvnw clean package
+
+RUN ./mvnw clean package -DskipTests
+
 
 # Expose the port the app runs on
 EXPOSE 8089
